@@ -8,6 +8,8 @@ The [original TERRA project](https://github.com/modem-works/terra) is our visual
 
 The native iPhone app has its own [v1 build spec](app-v1-spec.md). Its first interface uses standard iOS controls.
 
+The device's round screen can be rehearsed before the electronics arrive with a [small route simulator](device-sim-spec.md) driven by the same route JSON the iPhone app exports.
+
 ## The chapters
 
 ### 1. Build TERRA without its case
