@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TERRA device simulator</title>
+<style>
+  body { font: 14px/1.4 system-ui, sans-serif; margin: 16px; color: #111; background: #f4f4f4; }
+  h1 { font-size: 16px; margin: 0 0 12px; }
+  h1 small { font-weight: normal; color: #666; }
+  .layout { display: grid; grid-template-columns: auto minmax(280px, 480px) minmax(280px, 380px); gap: 16px; align-items: start; }
+  @media (max-width: 1100px) { .layout { grid-template-columns: 1fr; } }
+  section { background: #fff; border: 1px solid #ccc; padding: 12px; }
+  fieldset { border: 1px solid #ccc; margin: 0 0 10px; padding: 8px 10px; }
+  legend { font-weight: 600; }
+  label { display: block; margin: 4px 0; }
+  input[type=range] { width: 100%; }
+  input[type=number] { width: 64px; }
+  output, .mono { font-family: ui-monospace, Menlo, monospace; }
+  button { margin: 2px 4px 2px 0; }
+  .device { width: 240px; height: 240px; border-radius: 50%; border: 14px solid #222; margin: 0 auto; }
+  .device canvas { display: block; width: 240px; height: 240px; border-radius: 50%; image-rendering: pixelated; }
+  .zoom .device, .zoom .device canvas { width: 480px; height: 480px; }
+  .buzz { animation: buzz 0.45s linear; }
+  @keyframes buzz { 0%,100% { transform: translate(0,0); } 20% { transform: translate(-3px,1px); } 40% { transform: translate(3px,-1px); } 60% { transform: translate(-3px,-1px); } 80% { transform: translate(3px,1px); } }
+  #buzzLabel { text-align: center; height: 20px; margin-top: 8px; font-weight: 700; visibility: hidden; }
+  #buzzLabel.on { visibility: visible; }
+  #map { width: 100%; aspect-ratio: 1; display: block; border: 1px solid #ccc; background: #fafafa; }
+  #log { max-height: 220px; overflow: auto; margin: 0; padding-left: 20px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; }
+  #debug { font-size: 12px; white-space: pre-wrap; margin: 0; }
+  #routeStatus.error { color: #b00; }
+  .hint { color: #666; font-size: 12px; }
+</style>
+</head>
+<body>
+<h1>TERRA device simulator <small>— 240 × 240 round screen, simulated sensors only. No hardware or BLE involved.</small></h1>
+<div class="layout">
+  <section id="screenPanel">
+    <div class="device" id="device"><canvas id="screen" width="240" height="240"></canvas></div>
+    <div id="buzzLabel">● VIBRATE</div>
+    <label><input type="checkbox" id="zoom"> Show screen at 2× (pixels stay 240 × 240)</label>
+    <h3>Vibration events</h3>
+    <ol id="log"></ol>
+    <h3>Debug</h3>
+    <pre id="debug"></pre>
+  </section>
+
+  <section>
+    <canvas id="map" width="960" height="960"></canvas>
+    <label><input type="checkbox" id="closeUp"> Close-up around position (≈250 m across)</label>
+    <p class="hint">Black: route path (gray once walked). Dashed: approach to start. Circles: turns. Red: simulated position, accuracy circle and heading. ✕: arrow target.</p>
+  </section>
+
+  <section>
+    <fieldset>
+      <legend>Route</legend>
+      <input type="file" id="routeFile" accept=".json,application/json">
+      <button id="loadSample">Load sample</button>
+      <div id="routeStatus" class="hint"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Position</legend>
+      <label>Progress along route: <output id="progressOut"></output>
+        <input type="range" id="progress" step="0.1"></label>
+      <span class="hint">Below 0 is an approach walk toward the start.</span>
+      <label>Off-route offset: <output id="lateralOut"></output>
+        <input type="range" id="lateral" min="-100" max="100" step="1" value="0"></label>
+      <button id="recenter">Back on path</button>
+      <div>
+        <button id="walk">Walk ▶</button>
+        <select id="speed"><option value="1">1×</option><option value="5">5×</option><option value="20" selected>20×</option><option value="60">60×</option></select>
+        <span class="hint">walking 1.4 m/s</span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Compass heading</legend>
+      <label>Heading: <input type="number" id="headingNum" min="0" max="359" step="1"> °
+        <input type="range" id="heading" min="0" max="359" step="1"></label>
+      <label><input type="checkbox" id="follow" checked> Face the walking direction</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>GPS</legend>
+      <label><input type="checkbox" id="fix" checked> Has fix</label>
+      <label>Accuracy: <output id="accuracyOut"></output>
+        <input type="range" id="accuracy" min="2" max="80" step="1" value="5"></label>
+      <span class="hint" id="accuracyHint"></span>
+    </fieldset>
+
+    <button id="restart">Restart</button>
+    <span class="hint">Resets navigation and the event log, and returns to the approach.</span>
+  </section>
+</div>
+<script type="module" src="src/app.js"></script>
+</body>
+</html>

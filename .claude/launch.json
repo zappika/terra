@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "device-sim",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["device-sim/server.js"],
+      "port": 4810
+    }
+  ]
+}
