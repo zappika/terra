@@ -1,0 +1,5 @@
+TERRA.xcodeproj/
+build/
+dist/
+DerivedData/
+*.xcuserstate
