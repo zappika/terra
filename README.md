@@ -1,3 +1,11 @@
+# TERRA — ongoing build
+
+This repository continues [Modem's original TERRA project](https://github.com/modem-works/terra). The original 2024 hardware, Arduino code, illustrations, and assembly guide remain below. The newer work adds a [build plan](plan.md), a [native iPhone app](ios/README.md), and a [round-screen simulator](device-sim/README.md). The app prepares a walking route; the simulator rehearses what the standalone device might show. The physical route transfer and outdoor device navigation still need to be built and tested.
+
+Changes began in October 2026. Original credits and the GPLv3 [license](LICENSE) are preserved.
+
+## Original project
+
 <h1 align="center">TERRA is a companion for mindful wandering</h1>
 
 <br> <!-- Additional spacing -->
