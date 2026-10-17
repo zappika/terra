@@ -6,7 +6,7 @@ On an iPhone, search for an address, look at a walking route, and tap **Send to 
 
 The [original TERRA project](https://github.com/modem-works/terra) is our visual and hardware inspiration. Its code and assembly guide are useful references, but it is an experimental 2024 prototype. We will build in small pieces and verify each one outdoors.
 
-The native iPhone app has its own [v1 build spec](app-v1-spec.md) and [two-screen sketch](design/app-v1-screens.svg).
+The native iPhone app has its own [v1 build spec](app-v1-spec.md). Its first interface uses standard iOS controls.
 
 ## The chapters
 

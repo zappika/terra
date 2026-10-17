@@ -1,6 +1,6 @@
 # TERRA iPhone app — v1 handoff
 
-This is the build spec for the first native iPhone app. The [two-screen sketch](design/app-v1-screens.svg) shows the intended feel. Build the app in a new `ios/` directory; leave the 2024 web app and Arduino code untouched until the device interface is ready.
+This is the build spec for the first native iPhone app. Build the app in a new `ios/` directory; leave the 2024 web app and Arduino code untouched until the device interface is ready.
 
 ## The promise
 
@@ -17,32 +17,23 @@ For v1, this is a **single-destination walking route**. No accounts, saved colle
 
 ## Screen 1 — Find a place
 
-- A map treated as a surface the route can grow across. A prominent search field says **Where are we going?** The surrounding art can feel soft, strange, and handmade; the actual search result stays legible.
+- Show a standard MapKit map with a native SwiftUI search field labeled **Search for a place**.
 - As the user types, show MapKit place/address suggestions. On selection, center the map and calculate a walking route.
-- A small **My position** control returns the map to the user's position. Decorative marks may surround the map, but fake coordinates or fake instrument readings should not appear.
+- A standard **Current location** control returns the map to the user's position.
 - On first use, ask for location permission only when it is needed to calculate a route. If denied, explain why a start point is needed and offer a way to try permission again or choose a start point manually.
 - If opened from a successful Apple Maps share, skip typing and proceed to Route preview after calculating.
 
 ## Screen 2 — Route preview
 
 - Show the entire route on the map, with clear start and destination markers. Keep the actual route visible above the bottom sheet.
-- A lower, soft-edged route area: destination name and address, **Walking**, distance, estimated time, and start point. Show the chosen route as **TERRA route** so an Apple Maps import is not mistaken for an exact copy.
+- A native sheet shows the destination name and address, **Walking**, distance, estimated time, and start point. Show the chosen route as **TERRA route** so an Apple Maps import is not mistaken for an exact copy.
 - Primary action: **Send to TERRA**. If no device is connected, this opens a compact connection sheet with **Find TERRA**, connection state, and retry. During transfer show progress; finish only after the device confirms that it stored the route.
 - Secondary action: **Change destination**. Before hardware is available, a development-only **Export route JSON** action may help test the route model; it should not pretend that the device received anything.
 - If directions fail or the route is empty, explain the problem and offer **Try again** or **Change destination**. Do not enable Send.
 
-## Visual direction — organic and alien
+## Interface
 
-TERRA is a little art object with a navigation function. The supplied references are the centre of this direction: the first image shows black, hand-drawn creature/flower/splatter marks with uneven edges and holes of negative space; the second shows soft, almost living objects in pink, stone, and translucent glowing green. The subculture feeling comes from odd personal symbols, worn print, charms, colour, and humour. It should feel found at an experimental music show or carried as a talisman, not issued as equipment. Draw original marks and forms; do not trace the supplied symbols or copy logos, posters, or album artwork.
-
-- **Palette and material:** ink black `#171614`, warm bone `#F2EFE7`, translucent acid green `#B9EA70`, deep plum `#44233F`, fleshy pink `#C96193`, and occasional tarnished silver `#AAA7A0`. Dark areas can glow, but give them warm, tactile surroundings. The app need not be uniformly dark.
-- **Type:** expressive, slightly awkward display lettering paired with a clean readable face for addresses, distance, and actions. Try swollen or stretched letterforms and imperfect registration in the artwork. Avoid military stencil, all-caps telemetry, serial numbers, and dashboard microtype.
-- **Marks:** invent a small family of organic glyphs: seed/eye, mushroom/flower, tendril, cell cluster. Use irregular painted edges, open holes, dots, and grain. Some marks can seem to grow along a route. Each has character; none needs to decode as a navigation instruction.
-- **Shape:** soft asymmetry, bulges, puddles, hand-cut edges, translucent plastic, glossy light trapped beneath a skin. A route line may look luminous and alive, but must still trace the actual walking path accurately.
-- **Motion:** a mark can slowly breathe or a route can gently appear. No radar sweep, scanning grid, constant flicker, or attention-grabbing animation. Respect Reduce Motion and battery life.
-- **Voice:** human and slightly mysterious. **Where are we going?**, **A way through**, **Send to TERRA**, **TERRA has it** are starting points. Let the images carry the weirdness; the action and recovery words can be plain.
-
-The sketch is a visual direction, not pixel-perfect layout. Use native SwiftUI behavior, Dynamic Type, VoiceOver labels, and strong contrast for functional text. Put atmosphere around the decisions, not over them. The screen should still make the destination, walking route, and transfer result easy to understand.
+Use the standard iOS appearance and native SwiftUI and MapKit components. Follow the system light and dark modes, system colours, SF Symbols, Dynamic Type, VoiceOver, and default control styles. Use a standard search field, map controls, navigation bar, sheets, buttons, lists, alerts, and progress indicators where appropriate. The route is a normal MapKit overlay with clear start and destination markers. No custom palette, lettering, illustration, texture, animation, or branded screen treatment for v1. Keep labels and states plain so the app is easy to build and test.
 
 ## Navigation data and Bluetooth boundary
 
