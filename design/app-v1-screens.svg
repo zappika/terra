@@ -1,78 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="820" viewBox="0 0 1120 820" role="img" aria-label="Two dark, phosphor-green TERRA iPhone screen concepts: destination search and walking-route preview">
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="820" viewBox="0 0 1120 820" role="img" aria-label="Two TERRA iPhone concepts with warm paper, alien creature marks, a soft pink search screen, and a glowing green walking route">
   <defs>
-    <radialGradient id="field"><stop stop-color="#203a26"/><stop offset=".58" stop-color="#101b15"/><stop offset="1" stop-color="#080d0b"/></radialGradient>
-    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#48644a" stroke-width=".5" opacity=".32"/></pattern>
-    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="7"/></filter>
-    <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".68" numOctaves="3" seed="8" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".15"/></feComponentTransfer></filter>
-    <clipPath id="screen-a"><rect x="138" y="75" width="324" height="660" rx="34"/></clipPath>
-    <clipPath id="screen-b"><rect x="658" y="75" width="324" height="660" rx="34"/></clipPath>
+    <radialGradient id="pink" cx="32%" cy="22%" r="85%"><stop stop-color="#F4B6CE"/><stop offset=".54" stop-color="#C96193"/><stop offset="1" stop-color="#773E65"/></radialGradient>
+    <radialGradient id="green" cx="44%" cy="42%" r="68%"><stop stop-color="#EDFFCE"/><stop offset=".4" stop-color="#B9EA70"/><stop offset="1" stop-color="#78A63A" stop-opacity=".65"/></radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="3" seed="11" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".07"/></feComponentTransfer></filter>
+    <clipPath id="screen1"><rect x="138" y="82" width="338" height="656" rx="42"/></clipPath>
+    <clipPath id="screen2"><rect x="644" y="82" width="338" height="656" rx="42"/></clipPath>
   </defs>
-  <rect width="1120" height="820" fill="#080d0b"/>
-  <path d="M0 100H1120M0 707H1120" stroke="#26392a" stroke-width="1"/>
-  <text x="138" y="43" fill="#baf75e" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3">TERRA / INTERFACE STUDY 01</text>
-  <text x="658" y="43" fill="#baf75e" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3">TERRA / INTERFACE STUDY 02</text>
-  <rect x="130" y="67" width="340" height="676" rx="43" fill="#020504" stroke="#37563b" stroke-width="2"/>
-  <rect x="650" y="67" width="340" height="676" rx="43" fill="#020504" stroke="#37563b" stroke-width="2"/>
-  <g clip-path="url(#screen-a)" font-family="Arial, sans-serif">
-    <rect x="138" y="75" width="324" height="660" fill="url(#field)"/>
-    <rect x="138" y="75" width="324" height="660" fill="url(#grid)"/>
-    <path d="M145 518C212 466 249 487 309 435S385 391 458 346M126 586C180 536 236 556 282 500S364 442 477 418" fill="none" stroke="#4d714c" stroke-width="2" opacity=".32"/>
-    <circle cx="308" cy="452" r="130" fill="none" stroke="#729d67" stroke-width="1" opacity=".26"/>
-    <circle cx="308" cy="452" r="85" fill="none" stroke="#729d67" stroke-width="1" opacity=".36"/>
-    <circle cx="308" cy="452" r="39" fill="none" stroke="#baf75e" stroke-width="1" opacity=".56"/>
-    <path d="M308 308V594M165 452H454" stroke="#97c781" stroke-width="1" opacity=".26"/>
-    <path d="M289 452H327M308 433V471" stroke="#baf75e" stroke-width="2"/>
-    <circle cx="308" cy="452" r="5" fill="#baf75e"/>
-    <rect x="138" y="75" width="324" height="220" fill="#080d0b" opacity=".93"/>
-    <text x="161" y="109" fill="#d5d9c5" font-size="12" font-weight="700" letter-spacing="3">TERRA / 001</text>
-    <text x="400" y="109" fill="#70e7df" font-family="monospace" font-size="10">● LIVE</text>
-    <path d="M161 123H440" stroke="#648864" stroke-width="1"/>
-    <text x="158" y="190" fill="#baf75e" font-size="58" font-weight="900" letter-spacing="-5">WHERE</text>
-    <text x="158" y="246" fill="#baf75e" font-size="58" font-weight="900" letter-spacing="-5">TO<span fill="#70e7df">?</span></text>
-    <path d="M161 263H440" stroke="#baf75e" stroke-width="2"/>
-    <text x="163" y="284" fill="#d5d9c5" font-family="monospace" font-size="11" letter-spacing="1">ENTER DESTINATION  ▸</text>
-    <path d="M138 607H462V735H138Z" fill="#0a110d" stroke="#536f50" stroke-width="1"/>
-    <path d="M160 628H440" stroke="#658c5e" stroke-width="1"/>
-    <text x="161" y="650" fill="#70e7df" font-family="monospace" font-size="10" letter-spacing="2">POSITION / ACQUIRED</text>
-    <text x="161" y="678" fill="#d5d9c5" font-size="19" font-weight="800" letter-spacing="1">MY POSITION</text>
-    <path d="M401 665l11 11 20-24" fill="none" stroke="#baf75e" stroke-width="2"/>
-    <text x="161" y="712" fill="#7f9a7d" font-family="monospace" font-size="10">OR IMPORT A PLACE FROM MAPS ↗</text>
-    <rect x="138" y="75" width="324" height="660" filter="url(#grain)" opacity=".27"/>
+  <rect width="1120" height="820" fill="#F2EFE7"/>
+  <rect width="1120" height="820" filter="url(#grain)" opacity=".36"/>
+  <g fill="#171614">
+    <path d="M53 96c12-22 27-11 27 3 12-16 26-11 23 5 18-5 24 8 12 18 17 11 6 27-10 21-5 15-20 18-28 4-10 13-27 7-23-8-18 0-22-16-7-25-7-7-3-17 6-18z"/>
+    <circle cx="75" cy="116" r="7" fill="#F2EFE7"/><circle cx="96" cy="130" r="4" fill="#F2EFE7"/>
+    <path d="M1033 104c9-2 12 4 7 13 10-7 18 1 12 10 12-3 17 6 8 13 11 3 10 14-1 16 2 13-9 18-17 8-9 9-20 4-18-8-13-3-14-14-3-18-5-10 0-17 12-16-5-10-3-15 0-18z"/>
+    <circle cx="1039" cy="138" r="7" fill="#F2EFE7"/>
+    <path d="M53 594c6-15 17-25 26-23 10 3 10 17 7 26 11-10 24-7 28 4 4 12-8 20-20 20 13 7 13 19 4 25-10 8-21-1-24-12-3 16-16 19-24 10-8-9-2-19 10-25-15 1-23-8-18-18 2-4 6-6 11-7z"/>
+    <circle cx="74" cy="609" r="7" fill="#F2EFE7"/>
+    <path d="M1018 572c18 17 30 11 42 32-9-4-17 0-21 8 17-1 27 11 24 22-13-8-27-9-34 5 2-18-10-23-23-24 16-6 18-21 12-43z"/>
+    <circle cx="1000" cy="545" r="4"/><circle cx="1038" cy="540" r="7"/><circle cx="1072" cy="558" r="3"/>
   </g>
-  <g clip-path="url(#screen-b)" font-family="Arial, sans-serif">
-    <rect x="658" y="75" width="324" height="660" fill="url(#field)"/>
-    <rect x="658" y="75" width="324" height="660" fill="url(#grid)"/>
-    <path d="M643 376C715 344 762 374 799 322S882 285 1000 239M657 439C724 405 771 430 815 372S907 315 1000 299" fill="none" stroke="#52744d" stroke-width="2" opacity=".35"/>
-    <circle cx="816" cy="315" r="170" fill="none" stroke="#93bd70" stroke-width="1" opacity=".18"/>
-    <circle cx="816" cy="315" r="111" fill="none" stroke="#93bd70" stroke-width="1" opacity=".26"/>
-    <path d="M697 407C729 390 755 401 770 372S791 339 821 347 855 322 855 291 888 286 924 246" fill="none" stroke="#baf75e" stroke-width="19" opacity=".38" filter="url(#glow)"/>
-    <path d="M697 407C729 390 755 401 770 372S791 339 821 347 855 322 855 291 888 286 924 246" fill="none" stroke="#baf75e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="697" cy="407" r="11" fill="#0b140e" stroke="#70e7df" stroke-width="3"/>
-    <circle cx="924" cy="246" r="13" fill="#baf75e"/>
-    <path d="M913 246h22M924 235v22" stroke="#0b140e" stroke-width="2"/>
-    <text x="691" y="433" fill="#70e7df" font-family="monospace" font-size="9">START</text>
-    <text x="891" y="222" fill="#baf75e" font-family="monospace" font-size="9">END</text>
-    <rect x="658" y="75" width="324" height="130" fill="#080d0b" opacity=".9"/>
-    <text x="683" y="109" fill="#d5d9c5" font-size="12" font-weight="700" letter-spacing="3">TERRA / 002</text>
-    <text x="910" y="109" fill="#70e7df" font-family="monospace" font-size="10">← BACK</text>
-    <path d="M682 123H958" stroke="#648864" stroke-width="1"/>
-    <text x="679" y="164" fill="#baf75e" font-size="32" font-weight="900" letter-spacing="-2">PATH FOUND</text>
-    <text x="683" y="185" fill="#70e7df" font-family="monospace" font-size="10" letter-spacing="2">TERRA ROUTE / WALKING</text>
-    <path d="M658 472H982V735H658Z" fill="#0a110d" stroke="#536f50" stroke-width="1"/>
-    <path d="M682 492H958" stroke="#648864" stroke-width="1"/>
-    <text x="683" y="516" fill="#70e7df" font-family="monospace" font-size="10" letter-spacing="1">DESTINATION / BCN 001</text>
-    <text x="682" y="548" fill="#d5d9c5" font-size="21" font-weight="800">Parc de la Ciutadella</text>
-    <text x="683" y="568" fill="#8ca18a" font-family="monospace" font-size="10">PASSEIG DE PICASSO, BARCELONA</text>
-    <path d="M682 580H958" stroke="#648864" stroke-width="1"/>
-    <text x="682" y="615" fill="#baf75e" font-size="26" font-weight="900">2.1 KM</text>
-    <text x="831" y="615" fill="#baf75e" font-size="26" font-weight="900">28 MIN</text>
-    <path d="M682 635H958V696H682Z" fill="#baf75e"/>
-    <path d="M688 641H952V690H688Z" fill="none" stroke="#101a10" stroke-width="1"/>
-    <text x="705" y="665" fill="#101a10" font-size="19" font-weight="900" letter-spacing="1">TRANSMIT ROUTE</text>
-    <text x="706" y="684" fill="#253525" font-family="monospace" font-size="10">SEND TO TERRA  →</text>
-    <text x="683" y="718" fill="#8ca18a" font-family="monospace" font-size="10">DEVICE: NOT CONNECTED / TAP TO FIND</text>
-    <rect x="658" y="75" width="324" height="660" filter="url(#grain)" opacity=".27"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#171614">
+    <text x="137" y="53" font-size="15" font-weight="700">terra</text>
+    <text x="189" y="53" font-size="14">/ a little companion for getting lost less</text>
+    <path d="M547 36c19 8 18 25 3 27-9 1-19-5-25-17 7 3 13 2 22-10z"/>
   </g>
-  <text x="138" y="780" fill="#8fa387" font-family="monospace" font-size="12" letter-spacing="1">SEARCH / PLACE IMPORT</text>
-  <text x="658" y="780" fill="#8fa387" font-family="monospace" font-size="12" letter-spacing="1">ROUTE / TRANSMISSION</text>
+  <rect x="130" y="74" width="354" height="672" rx="51" fill="#171614"/>
+  <rect x="636" y="74" width="354" height="672" rx="51" fill="#171614"/>
+  <g clip-path="url(#screen1)" font-family="Arial, Helvetica, sans-serif">
+    <rect x="138" y="82" width="338" height="656" fill="#F2EFE7"/>
+    <path d="M134 82h348v202c-21-3-34 14-54 12-23-3-32 21-55 24-19 3-37-11-59 7-30 23-54-4-78 10-38 22-75-6-102-1z" fill="url(#pink)"/>
+    <path d="M153 121c6-8 13-2 11 5 5-7 13-3 10 4 7-4 13 2 9 7 7 1 7 8 1 10 2 8-5 10-9 5-5 5-10 2-11-3-6 4-11-2-7-7-7 0-8-7-3-11-4-4-2-8-1-10z" fill="#171614"/>
+    <circle cx="167" cy="136" r="4" fill="#D786AA"/>
+    <text x="196" y="142" font-size="17" font-weight="700" fill="#171614">terra</text>
+    <text x="154" y="218" font-size="39" font-weight="800" letter-spacing="-2.5" fill="#171614">Where are we</text>
+    <text x="154" y="261" font-size="43" font-weight="800" font-style="italic" letter-spacing="-2.5" fill="#171614">going?</text>
+    <path d="M151 296c45-6 91 7 139-7 55-16 111-6 170 4v59c-63-12-111-10-166 2-47 10-99 2-143 3z" fill="#F8F5EF" stroke="#171614" stroke-width="2"/>
+    <circle cx="178" cy="326" r="9" fill="none" stroke="#171614" stroke-width="2"/><path d="m184 332 8 8" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+    <text x="205" y="333" font-size="17" fill="#3B3634">Search for a place</text>
+    <path d="M138 394c80-25 136 6 196-25 50-27 103-8 142-36v405H138z" fill="#E9E6DA"/>
+    <path d="M132 511c80-39 111-15 164-37 57-23 107-7 185-53M129 591c62-39 99-19 146-29 58-11 69-47 136-50 38-2 51-13 78-29M133 690c64-28 104-43 146-34 60 12 84-8 118-37 25-22 44-23 94-30" fill="none" stroke="#D0CCC0" stroke-width="16" stroke-linecap="round"/>
+    <path d="M364 432c13-15 29-9 34 3 17-10 29-3 25 10 18 1 20 17 8 23 9 14-3 22-17 17-7 15-24 14-28 0-20 4-25-10-15-19-14-9-10-21 3-24-5-5-7-8-10-10z" fill="url(#green)"/>
+    <circle cx="400" cy="456" r="9" fill="#F2EFE7"/><circle cx="388" cy="466" r="3" fill="#F2EFE7"/><circle cx="412" cy="470" r="3" fill="#F2EFE7"/>
+    <path d="M150 665c0-17 12-31 30-31 17 0 28 14 28 31 0 22-29 43-29 43s-29-20-29-43z" fill="#171614"/>
+    <circle cx="179" cy="664" r="10" fill="#B9EA70"/>
+    <path d="M138 700c42-19 79-10 119-25 33-12 87-1 121-22 38-24 65-17 98-34v119H138z" fill="#F2EFE7" opacity=".97"/>
+    <text x="159" y="713" font-size="15" font-weight="700" fill="#171614">My position</text>
+    <text x="159" y="731" font-size="12" fill="#5D5953">or bring a place from Apple Maps</text>
+    <rect x="138" y="82" width="338" height="656" filter="url(#grain)" opacity=".25"/>
+  </g>
+  <g clip-path="url(#screen2)" font-family="Arial, Helvetica, sans-serif">
+    <rect x="644" y="82" width="338" height="656" fill="#E8E4D7"/>
+    <path d="M637 294c54-29 88-10 132-31 48-22 74-7 116-32 38-22 66-21 111-35M633 374c52-30 94-22 130-35 43-16 68-42 118-46 48-4 66-29 117-31M633 463c55-11 85-34 127-31 57 3 84-26 126-47 40-20 73-20 111-38" fill="none" stroke="#D0CCC0" stroke-width="19" stroke-linecap="round"/>
+    <path d="M684 351c36-22 64-7 88-44 22-33 41-28 64-43s9-37 46-39c18-1 30-13 52-35" fill="none" stroke="#B9EA70" stroke-width="24" stroke-linecap="round" opacity=".65" filter="url(#glow)"/>
+    <path d="M684 351c36-22 64-7 88-44 22-33 41-28 64-43s9-37 46-39c18-1 30-13 52-35" fill="none" stroke="#B9EA70" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M848 169c21-32 52-43 77-24 17-18 39-7 41 14 21-7 37 6 36 23 12 21-3 42-29 42-5 24-30 35-49 20-25 15-49 1-46-21-31-3-41-27-20-46-8-1-11-3-10-8z" fill="url(#green)"/>
+    <path d="M891 179c9-11 21-8 23 2 8-11 20-5 17 5 10-6 19 4 13 12 9 7 2 17-9 15-5 10-17 7-19-2-10 5-18-3-14-11-10-4-10-14-1-18-5-1-8-2-10-3z" fill="#F7F9DC"/>
+    <circle cx="917" cy="191" r="5" fill="#79A743"/>
+    <circle cx="684" cy="351" r="12" fill="#171614"/><circle cx="684" cy="351" r="5" fill="#F2EFE7"/>
+    <path d="M644 82h338v75c-70-10-119 11-169 7-65-6-117 15-169-3z" fill="#F2EFE7" opacity=".96"/>
+    <path d="m669 119-8 8 8 8" fill="none" stroke="#171614" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="686" y="134" font-size="18" font-weight="700" fill="#171614">A way through</text>
+    <path d="M643 393c49-13 78 14 121 2 49-14 66 8 104-3 49-13 80 9 115-1v347H643z" fill="#F6F3EC"/>
+    <path d="M665 428c9-13 17-6 19 3 8-8 17-2 13 6 12-4 16 5 9 12 8 6 3 15-7 13-6 8-16 6-17-3-11 4-17-4-11-12-10-4-12-12-6-19z" fill="#171614"/>
+    <circle cx="686" cy="446" r="4" fill="#F2EFE7"/>
+    <text x="721" y="449" font-size="14" font-weight="700" fill="#44233F">TERRA route · Walking</text>
+    <text x="664" y="499" font-size="25" font-weight="800" letter-spacing="-.8" fill="#171614">Parc de la Ciutadella</text>
+    <text x="665" y="524" font-size="14" fill="#5D5953">Passeig de Picasso, Barcelona</text>
+    <path d="M666 545c45-5 84 6 124 0 54-8 103 5 170-2" fill="none" stroke="#C9C3B7" stroke-width="1.5"/>
+    <text x="665" y="580" font-size="28" font-weight="800" fill="#171614">2.1 km</text>
+    <text x="832" y="580" font-size="28" font-weight="800" fill="#171614">28 min</text>
+    <text x="665" y="602" font-size="13" fill="#5D5953">from my position</text>
+    <path d="M663 624c48-8 85 4 130-2 64-9 100 4 166-3v67c-45 6-97-3-148 3-54 8-100-6-148 1z" fill="#171614"/>
+    <text x="686" y="664" font-size="19" font-weight="700" fill="#E5FFA9">Send to TERRA</text>
+    <path d="m925 649 10 7-10 8" fill="none" stroke="#E5FFA9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="665" y="720" font-size="14" text-decoration="underline" fill="#44233F">Change destination</text>
+    <rect x="644" y="82" width="338" height="656" filter="url(#grain)" opacity=".24"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#44233F">
+    <text x="138" y="784">01  /  find a place</text>
+    <text x="644" y="784">02  /  the walk, before the walk</text>
+  </g>
 </svg>
