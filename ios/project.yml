@@ -20,6 +20,13 @@ targets:
     platform: iOS
     sources:
       - path: TERRA
+      - path: Shared
+    dependencies:
+      - target: TERRAShare
+    entitlements:
+      path: TERRA/TERRA.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.zappika.terra]
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.zappika.terra
@@ -34,6 +41,41 @@ targets:
         INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ENABLE_PREVIEWS: YES
+  # Apple Maps share-sheet spike (build order step 3): records what a share contains.
+  TERRAShare:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: TERRAShare
+      - path: Shared
+    entitlements:
+      path: TERRAShare/TERRAShare.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.zappika.terra]
+    info:
+      path: TERRAShare/Info.plist
+      properties:
+        CFBundleDisplayName: TERRA
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.share-services
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).ShareViewController
+          NSExtensionAttributes:
+            # URLs, text, map items and vCards (Maps has shared places as .vcf).
+            NSExtensionActivationRule: >-
+              SUBQUERY(extensionItems, $extensionItem, SUBQUERY($extensionItem.attachments, $attachment,
+              ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.url"
+              || ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.plain-text"
+              || ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.apple.mapkit.map-item"
+              || ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.vcard"
+              ).@count >= 1).@count >= 1
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.zappika.terra.share
+        PRODUCT_NAME: TERRAShare
+        TARGETED_DEVICE_FAMILY: "1"
+        SKIP_INSTALL: YES
   TERRATests:
     type: bundle.unit-test
     platform: iOS

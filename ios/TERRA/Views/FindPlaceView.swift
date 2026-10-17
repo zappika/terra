@@ -10,6 +10,7 @@ struct FindPlaceView: View {
     @State private var isSearching = false
     @State private var sheetDetent: PresentationDetent = .medium
     @State private var screenHeight: CGFloat = 800
+    @State private var showingSharedItem = false
 
     var body: some View {
         NavigationStack {
@@ -50,6 +51,11 @@ struct FindPlaceView: View {
                             }
                             .pickerStyle(.inline)
                         }
+                        Section("Apple Maps share spike") {
+                            Button("Last shared item", systemImage: "square.and.arrow.down") {
+                                showingSharedItem = true
+                            }
+                        }
                     }
                 }
             }
@@ -88,6 +94,9 @@ struct FindPlaceView: View {
                 Button("OK") {}
             } message: {
                 Text(search.errorMessage ?? "")
+            }
+            .sheet(isPresented: $showingSharedItem) {
+                LastSharedItemView()
             }
             .sheet(isPresented: Binding(
                 get: { planner.isActive },
