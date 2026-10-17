@@ -17,23 +17,32 @@ For v1, this is a **single-destination walking route**. No accounts, saved colle
 
 ## Screen 1 — Find a place
 
-- Full-screen map with a calm, low-contrast style. A prominent search field says **Where to?**
+- A dark map surface that feels like a scan rather than a consumer map. A prominent search field says **Enter destination** under the oversized prompt **WHERE TO?**
 - As the user types, show MapKit place/address suggestions. On selection, center the map and calculate a walking route.
-- A small **Current location** control returns the map to the user's position.
+- A small **MY POSITION** control returns the map to the user's position. A coordinate readout may be present as atmosphere, but it must reflect real data or be labeled as decorative in mockups.
 - On first use, ask for location permission only when it is needed to calculate a route. If denied, explain why a start point is needed and offer a way to try permission again or choose a start point manually.
 - If opened from a successful Apple Maps share, skip typing and proceed to Route preview after calculating.
 
 ## Screen 2 — Route preview
 
 - Show the entire route on the map, with clear start and destination markers. Keep the actual route visible above the bottom sheet.
-- Bottom sheet: destination name and address, **Walking**, distance, estimated time, and start point. Show the chosen route as **TERRA route** so an Apple Maps import is not mistaken for an exact copy.
-- Primary action: **Send to TERRA**. If no device is connected, this opens a compact connection sheet with **Find TERRA**, connection state, and retry. During transfer show progress; finish only after the device confirms that it stored the route.
+- A lower information plate: destination name and address, **Walking**, distance, estimated time, and start point. Show the chosen route as **TERRA route** so an Apple Maps import is not mistaken for an exact copy.
+- Primary action: **TRANSMIT ROUTE**, with the plain-language subtitle **Send to TERRA**. If no device is connected, this opens a compact connection sheet with **Find TERRA**, connection state, and retry. During transfer show progress; finish only after the device confirms that it stored the route.
 - Secondary action: **Change destination**. Before hardware is available, a development-only **Export route JSON** action may help test the route model; it should not pretend that the device received anything.
 - If directions fail or the route is empty, explain the problem and offer **Try again** or **Change destination**. Do not enable Send.
 
-## Visual direction
+## Visual direction — a strange field instrument
 
-The phone app should feel like a quiet setup ritual: warm off-white, dark ink, one moss-green accent, generous spacing, and a prominent round route motif. The route itself is the visual focus. Use native SwiftUI controls and Dynamic Type; the sketch is a mood and hierarchy reference, not pixel-perfect layout. One primary action per screen. Avoid a dashboard, feeds, or dense settings.
+TERRA is a small art object with a navigation function. It should feel like a recovered 1990s electronic field instrument: black bag hardware, paranormal signal graphics, worn electronic-band print, after-dark maps, and phosphor light. The user references are 1990s Crumpler, *The X-Files*, and electronic band T-shirts. Draw from their energy, materials, and period texture; do not copy logos, posters, or album artwork.
+
+- **Palette:** near-black `#080D0B`, bruised green-black `#142019`, phosphor chartreuse `#BAF75E`, cold signal cyan `#70E7DF`, bone `#D5D9C5`, and an occasional warning orange `#F36C42`. Most of the screen stays dark. Colour appears like emitted light or ink on worn material.
+- **Type:** oversized compressed display words, small monospaced telemetry, visible numbering and labels. Type can feel misregistered or rubbed away in decorative layers. Search results, addresses, distance, and errors remain crisp.
+- **Marks:** radar rings, survey crosses, route traces, static grain, halftone, contour lines, stamped codes, and little inexplicable symbols. Give the route a soft glow, like a signal acquired through darkness.
+- **Shape:** off-centre composition, hard edges, cut corners, narrow rules, and layered panels. Avoid rounded white cards, generic map pins, cheerful gradients, and dashboard tiles.
+- **Motion:** subtle acquisition pulse or brief scan on transition; no constant flicker. Respect Reduce Motion. Grain and glow must not obscure route geometry or drain the phone through continuous animation.
+- **Voice:** curious and slightly coded: **WHERE TO?**, **PATH FOUND**, **TRANSMIT ROUTE**, **SIGNAL LOST**. Pair unusual terms with plain explanations when action or recovery matters. This app is allowed to feel strange; the user must still know which route they are sending and whether TERRA received it.
+
+The sketch is a visual direction, not pixel-perfect layout. Use native SwiftUI behavior, Dynamic Type, VoiceOver labels, and high contrast for functional text. This is not a growth funnel or a general-purpose navigation dashboard. There is one meaningful decision per screen.
 
 ## Navigation data and Bluetooth boundary
 
