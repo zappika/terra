@@ -26,7 +26,7 @@ Add GPS and haptics. Outdoors, TERRA waits for a fresh GPS fix, points toward th
 
 ### 5. A body for it
 
-Measure the working electronics and make a rough fit print with Pierre on his Bambu Lab A1 filament printer. Start with a simple PLA fit test; once the dimensions and button placement work, make a sturdier PETG shell. The [original case files](https://github.com/modem-works/terra/tree/main/STL%20Files) were designed for resin and SLS printing, so we will use them as a shape reference and adapt the design for filament printing. The reward is a pocketable object rather than a bundle of wires.
+Measure the working electronics and make a rough fit print with Pierre on his Bambu Lab A1 filament printer. Start with a simple PLA fit test; once the dimensions and button placement work, try a translucent PETG shell so the electronics glow through it. Expect a frosted, layered look rather than glass clarity. The [original case files](https://github.com/modem-works/terra/tree/main/STL%20Files) were designed for resin and SLS printing, so we will use them as a shape reference and adapt the design for filament printing. The reward is a pocketable object rather than a bundle of wires.
 
 ### 6. Wandering mode
 
@@ -47,6 +47,7 @@ Once address navigation works, add “surprise me”: choose a duration and mood
 - Compass: the original CMPS12 or a more available magnetometer/IMU. A [LIS3MDL](https://www.adafruit.com/product/4479) is a good learning part, though a final pocket device may benefit from tilt compensation.
 - [DRV2605L haptic driver](https://www.adafruit.com/product/2305) **and a vibration motor**; the driver alone cannot vibrate.
 - Battery and power button only after we have measured current draw and settled the case layout. Match battery connector polarity to the board.
+- Translucent PETG for the final shell, after a small sample print confirms the look; no need to buy a full spool for the first fit test if Pierre has PLA.
 
 Part numbers can change with stock. We choose by function, voltage, interface, size, and library support; then update the wiring and code to match what we can actually obtain. We will check EU suppliers before placing an order.
 
