@@ -26,7 +26,7 @@ Add GPS and haptics. Outdoors, TERRA waits for a fresh GPS fix, points toward th
 
 ### 5. A body for it
 
-Measure the working electronics and make a rough fit print with Pierre. Adjust the case for his printer, then add a suitable battery, button, and charging access. The [original case files](https://github.com/modem-works/terra/tree/main/STL%20Files) were designed for resin and SLS printing, so a filament printer may call for a revised design. The reward is a pocketable object rather than a bundle of wires.
+Measure the working electronics and make a rough fit print with Pierre on his Bambu Lab A1 filament printer. Start with a simple PLA fit test; once the dimensions and button placement work, make a sturdier PETG shell. The [original case files](https://github.com/modem-works/terra/tree/main/STL%20Files) were designed for resin and SLS printing, so we will use them as a shape reference and adapt the design for filament printing. The reward is a pocketable object rather than a bundle of wires.
 
 ### 6. Wandering mode
 
@@ -39,6 +39,7 @@ Once address navigation works, add “surprise me”: choose a duration and mood
 - [ESP32 Feather V2](https://www.adafruit.com/product/5400), preferably with headers if available locally.
 - [Waveshare 1.28-inch round GC9A01 display](https://www.waveshare.com/1.28inch-LCD-Module.htm), matching the original project's screen.
 - A small solderless breadboard, jumper wires, a USB-C data cable, and a few STEMMA QT/Qwiic cables. Check which headers and cables come with the parts before ordering extras.
+- Borrow a temperature-controlled soldering iron from Pierre if possible. If not, add one, solder, and a stand before permanent assembly; the first iPhone app work needs none of these.
 
 **Choose next, after checking local stock and how we want the device to fit:**
 
@@ -55,4 +56,4 @@ Search an address on iPhone, preview a walkable route, send it to TERRA, disconn
 
 ## This weekend
 
-Walk to an address and note three moments when an arrow, distance, or vibration would have helped. Ask Pierre what printer he has. Check local stock for the first shopping round. The iPhone development setup is already ready.
+Walk to an address and note three moments when an arrow, distance, or vibration would have helped. Pierre has a Bambu Lab A1 filament printer; ask whether he has PLA or PETG on hand and whether we can borrow a soldering iron. Check local stock for the first shopping round. The iPhone development setup is already ready.
