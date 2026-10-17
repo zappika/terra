@@ -1,0 +1,170 @@
+{
+  "createdAt" : "2026-10-14T17:46:40Z",
+  "destination" : {
+    "lat" : 41.403629,
+    "lon" : 2.174356
+  },
+  "distanceMeters" : 2567,
+  "expectedTravelTimeSeconds" : 2438,
+  "id" : "7E2A0C1E-5B8D-4F43-9A51-3C0F6D2B9E11",
+  "name" : "Sagrada Família",
+  "points" : [
+    {
+      "lat" : 41.387164,
+      "lon" : 2.170276
+    },
+    {
+      "lat" : 41.387282,
+      "lon" : 2.170059
+    },
+    {
+      "lat" : 41.387508,
+      "lon" : 2.170118
+    },
+    {
+      "lat" : 41.387628,
+      "lon" : 2.17036
+    },
+    {
+      "lat" : 41.389242,
+      "lon" : 2.16833
+    },
+    {
+      "lat" : 41.389398,
+      "lon" : 2.168556
+    },
+    {
+      "lat" : 41.389657,
+      "lon" : 2.168334
+    },
+    {
+      "lat" : 41.39318,
+      "lon" : 2.163947
+    },
+    {
+      "lat" : 41.398431,
+      "lon" : 2.170936
+    },
+    {
+      "lat" : 41.398888,
+      "lon" : 2.17035
+    },
+    {
+      "lat" : 41.398947,
+      "lon" : 2.170292
+    },
+    {
+      "lat" : 41.398966,
+      "lon" : 2.170357
+    },
+    {
+      "lat" : 41.399143,
+      "lon" : 2.170526
+    },
+    {
+      "lat" : 41.3995,
+      "lon" : 2.17009
+    },
+    {
+      "lat" : 41.402024,
+      "lon" : 2.173466
+    },
+    {
+      "lat" : 41.402353,
+      "lon" : 2.173507
+    },
+    {
+      "lat" : 41.402728,
+      "lon" : 2.173475
+    },
+    {
+      "lat" : 41.403155,
+      "lon" : 2.173632
+    },
+    {
+      "lat" : 41.403501,
+      "lon" : 2.17316
+    },
+    {
+      "lat" : 41.403528,
+      "lon" : 2.173197
+    },
+    {
+      "lat" : 41.404011,
+      "lon" : 2.173843
+    }
+  ],
+  "start" : {
+    "lat" : 41.387015,
+    "lon" : 2.170047
+  },
+  "turns" : [
+    {
+      "distanceFromStartMeters" : 22.5,
+      "instruction" : "Take a left",
+      "pointIndex" : 1,
+      "turnDegrees" : 64
+    },
+    {
+      "distanceFromStartMeters" : 72.6,
+      "instruction" : "Take a right onto Gran Via de les Corts Catalanes",
+      "pointIndex" : 3,
+      "turnDegrees" : -106
+    },
+    {
+      "distanceFromStartMeters" : 319.5,
+      "instruction" : "Take a left onto Passeig de Gràcia",
+      "pointIndex" : 4,
+      "turnDegrees" : 85
+    },
+    {
+      "distanceFromStartMeters" : 345.2,
+      "instruction" : "Take a right onto Carrer de València",
+      "pointIndex" : 5,
+      "turnDegrees" : -80
+    },
+    {
+      "distanceFromStartMeters" : 915.6,
+      "instruction" : "Cross the street and take a left onto Passeig de Sant Joan",
+      "pointIndex" : 7,
+      "turnDegrees" : 88
+    },
+    {
+      "distanceFromStartMeters" : 1740.7,
+      "instruction" : "Take a right onto Avinguda Diagonal",
+      "pointIndex" : 8,
+      "turnDegrees" : -89
+    },
+    {
+      "distanceFromStartMeters" : 1825.2,
+      "instruction" : "Take a left onto the sidewalk",
+      "pointIndex" : 11,
+      "turnDegrees" : 74
+    },
+    {
+      "distanceFromStartMeters" : 1903.9,
+      "instruction" : "Take a right onto Carrer de Mallorca",
+      "pointIndex" : 13,
+      "turnDegrees" : 87
+    },
+    {
+      "distanceFromStartMeters" : 2301.5,
+      "instruction" : "Take a left onto Carrer de Sardenya",
+      "pointIndex" : 14,
+      "turnDegrees" : -40
+    },
+    {
+      "distanceFromStartMeters" : 2429.4,
+      "instruction" : "Take a right onto Carrer de Provença",
+      "pointIndex" : 17,
+      "turnDegrees" : -65
+    },
+    {
+      "distanceFromStartMeters" : 2488.7,
+      "instruction" : "The destination is on your right",
+      "pointIndex" : 19,
+      "turnDegrees" : 75
+    }
+  ],
+  "version" : 1
+}
